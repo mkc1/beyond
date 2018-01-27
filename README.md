@@ -1,2 +1,0 @@
-# beyond
-beyond hackathon
