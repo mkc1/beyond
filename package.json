@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mkc1/beyond/issues"
   },
-  "homepage": "https://github.com/mkc1/beyond#readme"
+  "homepage": "https://github.com/mkc1/beyond#readme",
+  "dependencies": {
+    "firebase": "^4.9.0"
+  }
 }
