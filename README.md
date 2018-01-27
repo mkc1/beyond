@@ -1,60 +1,36 @@
-# Get started:
+# Firebase Quickstarts for Javascript
 
-```
-git clone git@github.com:queerviolet/spark.git
-cd spark
-npm install
-npm start
-```
+A collection of quickstart samples demonstrating the Firebase APIs using the Javascript SDK. For more information, see https://firebase.google.com.
 
-# Frontend
+Samples available:
+ - [Auth](auth/README.md)
+   - Anonymous Auth
+   - Custom Auth
+   - Phone Auth using a visible ReCaptcha
+   - Phone Auth using an invisible ReCaptcha
+   - Phone Auth using popup
+   - [Google Auth in a Chrome Extension](auth/chromextension/README.md)
+   - Facebook auth using Facebook login button
+   - Facebook auth using Firebase popup
+   - Facebook auth using Firebase redirect
+   - Google auth using Google sign-in button
+   - Google auth using Firebase popup
+   - Google auth using Firebase redirect
+   - Twitter auth using Firebase popup
+   - Twitter auth using Firebase redirect
+   - GitHub auth using Firebase popup
+   - GitHub auth using Firebase redirect
+ - [Database](database/README.md)
+   - Simple Social Blogging app
+ - [Firestore](firestore/README.md)
+   - Simple Rating App
+ - [Storage](storage/README.md)
+   - Upload a file to Firebase Storage and display its URL
+ - [Messaging](messaging/README.md)
+   - Send notifications
 
-The frontend starts in [`main.js`](./main.js). The root of the react app
-is in [`App.jsx`](./App.jsx).
+## How to make contributions?
+Please read and follow the steps in the [CONTRIBUTING.md](CONTRIBUTING.md)
 
-# a word about ~
-
-The webpack config aliases `~` to mean "the root of the app". For example,
-you can `import firebase from '~/fire'` anywhere in your app, without
-worrying about how many `..`s to have in your relative path.
-
-# Firebase
-
-Firebase is setup in [`fire/index.js`](./fire/index.js). Your config will
-get written to [`fire/setup.js`](./fire/setup.js) after you run `npm install`.
-
-You can import the various Firebase APIs from `~/fire`. For instance:
-
-```js
-  import firebase, {auth} from '~/fire'
-
-  const google = firebase.auth.GoogleAuthProvider
-  auth.signInWithPopup(google)
-```
-
-# Functions
-
-Write your [Cloud Functions](https://firebase.google.com/docs/functions/) in
-[`functions/index.js`](./functions/index.js).
-
-You can require node modules from Cloud Functions normally. Be sure to `npm install` them
-*inside* the functions directory (it has its own `package.json`).
-
-Sadly, you can't use `import` statements, and you can't `require` code that does.
-Don't despair, the library provides a workaround.
-
-## The Library
-
-The library is defined in [`lib/index.js`](lib/index.js). In the library, you
-can `import` code from your project normally, and anything you `export` will be
-available to your Cloud Functions.
-
-It is a bridge between Cloud Function code and the rest of your
-project's code.
-
-# Hot loading
-
-Hot module replacement is enabled, and the react-hot-loader plugins are applied.
-
-Your React components will update in place after you save them, without losing
-their state.
+## License
+See [LICENSE](LICENSE)
