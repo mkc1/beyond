@@ -17,8 +17,8 @@
 
 // Shortcuts to DOM Elements.
 var messageForm = document.getElementById('message-form');
-var messageInput = document.getElementById('new-post-message');
-var titleInput = document.getElementById('new-post-title');
+var messageInput = document.getElementById('new-event-description');
+var titleInput = document.getElementById('new-event-title');
 var signInButton = document.getElementById('sign-in-button');
 var signOutButton = document.getElementById('sign-out-button');
 var splashPage = document.getElementById('page-splash');
@@ -58,6 +58,28 @@ function writeNewPost(uid, username, picture, title, body) {
   return firebase.database().ref().update(updates);
 }
 // [END write_fan_out]
+
+function writeNewEvent(uid, username, title, description, datetime, location) {
+
+    var eventData = {
+        author: username,
+        uid: uid,
+        title: title,
+        description: description,
+        datetime: datetime,
+        location: location,
+        planningToAttend: [],
+        peopleAttended: []
+    }
+
+    var newEventKey = firebase.database().ref().child('events').push().key;
+
+    var updates = {};
+    updates['/events' + newEventKey] = eventData;
+    updates['/user-events/' + uid + '/' + newEventKey] = eventData;
+
+    return firebase.database.ref().update(updates);
+}
 
 /**
  * Star/unstar post.
