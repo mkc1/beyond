@@ -28,7 +28,7 @@ body {
   color: #777;
   padding: 3rem;
   box-sizing: border-box; /*change box model so borders and padding are no longer added to total width or height we specify for height*/
-  background-image: linear-gradient(to right bottom, rgba(109,0,25,.8),rgba(109,0,25,0.8)), url(../img/hssbg1.png);
+  background-image: linear-gradient(to right bottom, rgba(71,6,52,.8),rgba(71,6,52, 0.8)), url(../img/hssbg1.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -55,12 +55,12 @@ body {
 .header__text-container {
   position: absolute;
   top: 20%;
-  left: 5%;
-  width: 90%;
-  height: 50%;
+  left: 0%;
+  width: 100%;
+  height: 70%;
   opacity: 1;
   text-align: center;
-  background-color: #efdd6f;
+  background-color: #d3d3d3;
 
 }
 .heading-primary {
@@ -96,7 +96,7 @@ body {
   opacity: 1;
   position: absolute;
   top: 5%;
-  left: 25%;
+  left: 18%;
 }
 
 @keyframes moveInLeft {
@@ -142,7 +142,6 @@ body {
 .shape-container {
   height: 50px;
   width: 450px;
-  background-image: url(../img/tiles.jpeg);
   border-radius: 80px;
   margin-bottom: 30px;
   float: left;
@@ -151,17 +150,61 @@ body {
 }
 .shape {
   height: 50px;
-  width: 450px;
-  background-color: #add8e6;
+  width: 350px;
+  background-color: #a9a9a9;
   border-radius: 5px;
   margin-bottom: 5px;
   float: left;
+
   margin-right: 20px;
   border: 1px solid black;
   z-index: 99999 !important;
 }
 
+.shape1 {
+  position: absolute;
+  top: 22%;
+  left: 10%;
+}
+.shape2 {
+  position: absolute;
+  top: 42%;
+  left: 10%;
+}
+.shape3 {
+  position: absolute;
+  left: 10%;
+  top: 62%;
+}
+.shape4 {
+  position: absolute;
+  top: 82%;
+  left: 10%;
+}
 
+
+
+
+.shape5 {
+  position: absolute;
+  top: 22%;
+  left: 55%;
+}
+.shape6 {
+  position: absolute;
+  top: 42%;
+  left: 55%;
+}
+.shape7 {
+  position: absolute;
+  top: 62%;
+  left: 55%;
+}
+.shape8 {
+  position: absolute;
+  top: 82%;
+  left: 55%;
+}
 
 
 
